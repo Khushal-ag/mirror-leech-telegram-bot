@@ -342,6 +342,14 @@ try:
 except KeyError:
     DUMP_CHAT_ID = None
 try:
+    dumps = getConfig('LEECH_DUMP_CHAT_IDS')
+    dumps = dumps.split(" ")
+    for chats in dumps:
+        LEECH_DUMP_CHAT_IDS.add(int(chats))
+except:
+    logging.warning('Dump chats not provided')
+    pass
+try:
     STOP_DUPLICATE = getConfig('STOP_DUPLICATE')
     STOP_DUPLICATE = STOP_DUPLICATE.lower() == 'true'
 except KeyError:

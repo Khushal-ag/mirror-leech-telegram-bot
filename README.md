@@ -156,6 +156,7 @@ Fill up rest of the fields. Meaning of each field is discussed below:
 - `EQUAL_SPLITS`: Split files larger than **TG_SPLIT_SIZE** into equal parts size (Not working with zip cmd). `Bool`
 - `CUSTOM_FILENAME`: Add custom word to leeched file name.
 - `DUMP_CHAT_ID` : Channel ID, You can get this by Forwarding message to [@JsonDumpBot](https://t.me/JsonDumpBot).
+- `LEECH_DUMP_CHAT_IDS`: Multiple Channel Chat's IDs seperated with Space `' '`, You can get this by Forwarding message to [@JsonDumpBot](https://t.me/JsonDumpBot).
 - `UPSTREAM_REPO`: Your github repository link, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. Get token from [Github settings](https://github.com/settings/tokens). So you can update your appllication from filled repository on each restart. **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect - DON'T delete .gitignore file.
 - `SHORTENER_API`: Fill your Shortener API key.
 - `SHORTENER`: Shortener URL.
