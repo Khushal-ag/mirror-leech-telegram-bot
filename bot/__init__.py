@@ -334,6 +334,14 @@ except KeyError:
     BUTTON_SIX_NAME = None
     BUTTON_SIX_URL = None
 try:
+    DUMP_CHAT_ID = getConfig('DUMP_CHAT_ID')
+    if len(DUMP_CHAT_ID) == 0:
+        raise KeyError
+    else:
+        DUMP_CHAT_ID = int(DUMP_CHAT_ID)
+except KeyError:
+    DUMP_CHAT_ID = None
+try:
     STOP_DUPLICATE = getConfig('STOP_DUPLICATE')
     STOP_DUPLICATE = STOP_DUPLICATE.lower() == 'true'
 except KeyError:
